@@ -7,7 +7,7 @@
     <meta name="description" content="Prototype of Netflix hover UX with evaluative summary and uncensored comment window." />
     <!-- Tailwind via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Preload your poster for snappier paint -->
+    <!-- Preload images -->
     <link rel="preload" as="image" href="photo.jpg" />
     <link rel="preload" as="image" href="logo.png" />
   </head>
@@ -107,14 +107,14 @@
             {/* Top Bar */}
             <header className="sticky top-0 z-40 border-b border-white/10 bg-neutral-950/80 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/60">
               <div className="mx-auto max-w-7xl px-4 py-3 md:py-4 flex items-center gap-3">
+                {/* Logo only (no title text) */}
                 <img
                   src="logo.png"
                   alt="Logo"
-                  class="h-6 w-6 md:h-7 md:w-7 rounded-sm object-cover ring-1 ring-white/10 shadow"
+                  className="h-10 md:h-12 object-contain"
                   loading="eager"
                   decoding="async"
                 />
-                <h1 className="text-base md:text-lg font-semibold tracking-tight">Netflix UX Prototype — Shawshank Hover</h1>
                 <span className="ml-auto text-xs md:text-sm text-white/60">
                   Uncensored comment window: {UNLOCK_START}%–{CREDITS_START}%
                 </span>
@@ -177,7 +177,7 @@
                         </button>
                       </div>
                       <p className="text-xs text-white/80 leading-5">
-                        <span className="font-semibold">:</span> "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion."
+                        <span className="font-semibold">Clean summary:</span> "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion."
                       </p>
                       <p className="text-[11px] text-white/60">
                         Reviewers say <span className="italic">The Shawshank Redemption</span> is celebrated for its themes of hope and friendship, with exceptional performances by Tim Robbins and Morgan Freeman. Its portrayal of human spirit and institutional corruption is impactful. However, some find it overly sentimental and predictable, lacking originality. A few question its status among the greatest films due to its conventional narrative and lack of technical innovation. Its emotional resonance and timeless message remain widely acclaimed.
